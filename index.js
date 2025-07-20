@@ -5,7 +5,13 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 const cors = require("cors");
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://wishcraft-frontend.vercel.app/",
+    credentials: true,
+  })
+);
 
 // Middleware
 app.use(express.json());

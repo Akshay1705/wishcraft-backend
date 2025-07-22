@@ -7,7 +7,7 @@ const User = require("../models/User");
 // Secret key (from .env ideally)
 const JWT_SECRET = process.env.JWT_SECRET || "supersecret";
 
-// ✅ Register Route
+// Register Route
 router.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -45,7 +45,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// ✅ Login Route
+// Login Route
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 

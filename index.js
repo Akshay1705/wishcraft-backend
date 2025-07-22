@@ -26,7 +26,9 @@ app.use("/api/wishes", wishRoutes);
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/bucketbliss")
+  .connect(
+    `${process.env.MONGODB_URI}/bucketbliss` || "mongodb://localhost:27017/bucketbliss"
+  )
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => console.error("❌ DB Connection error:", err));
 

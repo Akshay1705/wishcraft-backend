@@ -30,6 +30,10 @@ mongoose
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => console.error("❌ DB Connection error:", err));
 
+app.get("/", (req, res) => {
+  res.send("Welcome to WishCraft API!");  
+});
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);

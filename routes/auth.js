@@ -27,9 +27,7 @@ router.post("/register", async (req, res) => {
 
     await user.save();
 
-    const token = jwt.sign({ userId: user._id }, JWT_SECRET, {
-      expiresIn: "7d",
-    });
+    const token = jwt.sign({ userId: user._id }, JWT_SECRET, {expiresIn: "7d",});
 
     res.status(201).json({
       message: "Registration successful",

@@ -22,7 +22,8 @@ router.get("/", authMiddleware, async (req, res) => {
     const wishes = await Wish.find(filter)
       .sort({ createdAt: -1 })
       .skip(skip)
-      .limit(parseInt(limit));
+      .limit(parseInt(limit))
+      .lean();
 
     return res.status(200).json({
       total,

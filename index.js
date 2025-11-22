@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 4000;
 
 const allowedOrigins = [
   process.env.FRONTEND_URL, // your Vercel URL
-  "http://localhost:5173", // for development
+  //"http://localhost:5173", // for development
 ];
 
 // CORS Setup using Environment Variable
